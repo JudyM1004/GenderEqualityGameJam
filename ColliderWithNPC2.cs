@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ColliderWithNPC : MonoBehaviour
+public class ColliderWithNPC2 : MonoBehaviour
 {
-    public GameObject Girl;
-    public GameObject Bum;
-    public GameObject Evil;
+    public GameObject angry;
+    public GameObject angry2;
+
     public GameObject bubble;
 
     // Start is called before the first frame update
@@ -14,8 +14,8 @@ public class ColliderWithNPC : MonoBehaviour
     {
         if (collider.gameObject.name == "Player")
         {
-            Girl.GetComponentInParent<Animator>().enabled = true;
-            Girl.GetComponentInParent<Animator>().Play("fadeinemoji");
+            angry.GetComponentInParent<Animator>().enabled = true;
+            angry.GetComponentInParent<Animator>().Play("fadeinemoji2");
         }
     }
 
@@ -25,8 +25,8 @@ public class ColliderWithNPC : MonoBehaviour
         {
             bubble.SetActive(false);
 
-            Girl.GetComponentInParent<Animator>().enabled = true;
-            Girl.GetComponentInParent<Animator>().Play("fadeoutemoji");
+            angry.GetComponentInParent<Animator>().enabled = true;
+            angry.GetComponentInParent<Animator>().Play("fadeoutemoji2");
         }
     }
 }
